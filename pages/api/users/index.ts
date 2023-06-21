@@ -14,21 +14,26 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
     switch(req.method){
+        
         case 'GET':
-            return  getUsers(res,req);
+            return  getUsers(res)
+        
         case 'POST':
-            return res.status(200).json({ name: 'desde POST' });
-        default:
-            return res.status(400).json({ name: 'error' });
+            return res.status(200).json({ name: 'desde POST' })
+       
+         default:
+            return res.status(400).json({ name: 'error' })
     }
-//   res.status(200).json({ name: 'desde cafecito' })
+
 }
 
-const getUsers = async(res:NextApiResponse,req:NextApiRequest) =>{
+const getUsers = async(res:NextApiResponse) =>{
     await db.connect();
-    
+
     const users = await User.find();
-    
+
     await db.disconnect();
-    res.status(200).json(users);
+
+    res.status(200).json(users)
+    // res.status(200).json(process.env)
 }

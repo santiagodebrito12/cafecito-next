@@ -1,23 +1,22 @@
+
 import mongoose, {Model,Schema} from 'mongoose';
+import { User } from '@/interfaces';
 
+export interface IUser extends User{
 
-export interface IUser{
-    categoria:"string",
-    descripcion:"string",
-    donaciones :"string",
-    img:"string"
-    nombre:"string"
 }
 
+
 const userSchema = new Schema({
-    description:{type:String,required:true},
-    img:{type:String,required:true},
-    name:{type:String,required:true},
-    category:{type:String,required:true},
-    donations:{type:String,required:true}
+    categoria:{type: String },
+    descripcion:{type:String},
+    donaciones:{type:String},
+    img:{type:String},
+    nombre:{type:String}
 });
 
-const userModel:Model<IUser> = mongoose.models.User || mongoose.model('Users',userSchema);
+const userModel:Model<IUser> = mongoose.models.Users || mongoose.model('Users',userSchema);
+
 
 
 export default userModel;

@@ -1,27 +1,27 @@
+
+import usersApi from "@/apis"
 import { Layout } from "@/components/layout"
-import { useEffect } from "react"
-import axios from 'axios';
-import UsersApi from "@/apis";
+import { getUsers } from "@/utils"
+import { useEffect, useState } from "react"
+
 
 export default function Explore (){
-  
-  const getUsers = async() =>{
-    try{
-      const res = await UsersApi.get('/users');
-      const {data}= res;
-      console.log(data)
-    }catch(error){
-      console.log(error)
-    }
-    
-  
-  }
+  const [users, setUsers] = useState([])
+
+
+
   useEffect(()=>{
    
-    getUsers();
-
-  },[])
+   getUsers()
+   .then((res)=>{
+      setUsers(res);
+   })
+   .catch((err)=>{
+    console.log(err)
+   })
   
+  },[])
+
   return (
     <Layout>
 
