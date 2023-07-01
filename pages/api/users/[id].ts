@@ -33,7 +33,9 @@ export default function handler(req:NextApiRequest,res:NextApiResponse){
 
 const getEntry = async (req:NextApiRequest,res:NextApiResponse) =>{
     const{id} = req.query;
+
     await db.connect();
+    
     const user = await User.findById(id);
     await db.disconnect();
     

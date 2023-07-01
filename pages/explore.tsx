@@ -3,12 +3,13 @@ import usersApi from "@/apis"
 import { Layout } from "@/components/layout"
 import { IUser } from "@/models"
 import { getUsers } from "@/utils"
+import { GetStaticProps } from "next";
 import { ReactNode, useEffect, useState } from "react"
 import logo from '@/assets/logo.svg';
 import Slider from "@/components/ui/Slider"
 
 export default function Explore (){
-  
+
   const [users, setUsers] = useState<IUser[]>([])
 
 
@@ -70,3 +71,5 @@ export default function Explore (){
     </Layout>
   )
 }
+
+
