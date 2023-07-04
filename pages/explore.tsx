@@ -7,6 +7,7 @@ import { GetStaticProps } from "next";
 import { ReactNode, useEffect, useState } from "react"
 import logo from '@/assets/logo.svg';
 import Slider from "@/components/ui/Slider"
+import Image from "next/image";
 
 export default function Explore (){
 
@@ -42,7 +43,7 @@ export default function Explore (){
         return(
           <li key={i} className="card card-usuario">
           <div className="contendor-img">
-              <img src={user.img} alt="imagen-usuario" className="imagen-usuario"/>
+              <Image src={user.img} alt="imagen-usuario" className="imagen-usuario" width={75} height={71}/>
           </div>
 
           <div className="mt-3 m-auto w-75 contenedor-text-card">

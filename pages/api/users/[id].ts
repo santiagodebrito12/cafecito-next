@@ -40,7 +40,7 @@ const getEntry = async (req:NextApiRequest,res:NextApiResponse) =>{
     await db.disconnect();
     
     if(!user){
-        return res.status(400).json({message:' id no encontrado '});
+        return res.status(400).json({message:' id no encontrado'});
     }
 
 

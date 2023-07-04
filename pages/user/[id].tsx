@@ -13,7 +13,7 @@ interface HomeProps {
 }
 
 export default function UserPage ({user}:HomeProps) {
-  
+    console.log(user)
 
     return (
     <Layout>
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps<{user: any}> = async (ctx:any) => {
   const res = await fetch(`http://localhost:3000/api/users/${id} `)
   const user = await res.json()
   
-  if(!user){
+  if(user.message){
     return{   
        redirect:{
          destination:'/',

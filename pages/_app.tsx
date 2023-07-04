@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-
+import Link from 'next/link'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -10,9 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
  <Head>
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"/>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" />
+      <Link rel="preconnect" href="https://fonts.gstatic.com" />
+      <Link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"/>
+      <Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"  />
   </Head>
   <Component {...pageProps} />
  </>

@@ -342,12 +342,29 @@ body, html {
   width: 55px;
 }
 }
+/* Auth css*/
+.contenedor-authentificacion {
+  margin: 3rem auto 33rem;
+}
+
+#btn-nuevo-usuario{
+  margin: 1rem auto;
+  display: block;
+  background-color: #8fa2cc;
+  color: white;
+  padding: 5px 10px;
+}
+.close-titulo{
+  display: none
+}
 
 /*Footer*/
 
 
 footer{
-    
+  position: relative;
+  bottom: 0vh;
+  width: 100%;
   margin-top: 180px;
   background-color: #f9f9f9;
   padding: 30px;
@@ -384,3 +401,4 @@ footer{
       width: 80px;
   }
 }
+
