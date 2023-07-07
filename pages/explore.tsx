@@ -1,7 +1,8 @@
 
 import usersApi from "@/apis"
 import { Layout } from "@/components/layout"
-import { IUser } from "@/models"
+import Link from 'next/link'
+import { User } from "@/interfaces"
 import { getUsers } from "@/utils"
 import { GetStaticProps } from "next";
 import { ReactNode, useEffect, useState } from "react"
@@ -11,7 +12,7 @@ import Image from "next/image";
 
 export default function Explore (){
 
-  const [users, setUsers] = useState<IUser[]>([])
+  const [users, setUsers] = useState<User[]>([])
 
 
 
@@ -41,7 +42,9 @@ export default function Explore (){
       {users.map((user,i):ReactNode=>{
         
         return(
-          <li key={i} className="card card-usuario">
+          <Link href={`/user/${user._id}`} key={i} className="card card-usuario">
+
+          <li  >
           <div className="contendor-img">
               <Image src={user.img} alt="imagen-usuario" className="imagen-usuario" width={75} height={71}/>
           </div>
@@ -59,6 +62,7 @@ export default function Explore (){
           </div>
        
           </li>
+          </Link>
         )
       })}
       

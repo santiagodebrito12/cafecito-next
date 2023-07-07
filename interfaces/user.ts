@@ -1,6 +1,6 @@
 
 export interface User { 
-    id:any,
+    _id:any,
     categoria:string,
     descripcion:string,
     donaciones :string,
