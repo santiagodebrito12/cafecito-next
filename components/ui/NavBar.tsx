@@ -29,7 +29,7 @@ export const NavBar = () => {
                     fontWeight:"600",
                     color:'#4a4a4a',
                     marginLeft:'10px',
-                }} >Cafecito</h3>   
+                }} >waves4gifts</h3>   
             </div>
           
             <nav className='mt-2 p-1 open' style={{
