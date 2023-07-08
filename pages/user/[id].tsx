@@ -1,23 +1,42 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { Layout } from '@/components/layout'
-import {GetStaticPaths} from 'next'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { IUser, User } from '@/models'
 import { getUsers, getUserById } from '@/utils';
 import  usersApi  from '@/apis';
 import { get } from 'http';
-import path from 'path';
+import {DetailHeader,DescriptionDetail,Donaciones} from '@/components/ui/UserDetail'
+import { Content } from '@/components/ui/UserDetail/Content';
+
 
 interface HomeProps {
   user:IUser
 }
 
 export default function UserPage ({user}:HomeProps) {
-    console.log(user)
-
-    return (
+  const [detailState, setdetailState] = useState('perfil')
+  
+  return (
     <Layout>
-        <h1>user page</h1>
+      
+      <div className="contenedor-perfil  ">
+                
+                <DetailHeader user={user} setdetailState={setdetailState}/>
+                  
+                 
+
+                {detailState==='perfil'
+                ? <div className="row  contenedor-info d-flex justify-content-center">
+                   
+                    <DescriptionDetail user={user}/>
+
+
+                    <Donaciones user={user}/>
+           
+                  </div>
+                :<Content user={user}/>}
+        </div>
+      
     </Layout>
   )
 }
