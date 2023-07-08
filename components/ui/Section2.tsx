@@ -37,7 +37,7 @@ export const Section2 = () => {
                    
                    {comentarios.map((usuario,i)=>{
                        return(
-                        <li className="card mt-4" key={i}>
+                        <li id="card"className="card mt-4" key={i}>
                         <div className="header-card d-flex justify-content-between align-items-center mt-2">
                             <Image src={usuario.img} alt="img-usuario" className="imagen-usuario"/>
                             <div className="header-text w-50">

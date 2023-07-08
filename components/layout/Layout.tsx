@@ -22,10 +22,7 @@ export const Layout = ({children}:LayoutProps) => {
       </Head>
       <NavBar/>
 
-      <Box sx={{
-      padding:'10px 20px',
-      margin:'40px 0px',
-  }}>
+      <Box>
     {children}
       </Box>
       <Footer/> 

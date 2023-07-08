@@ -7,7 +7,7 @@ export const Tittle = () => {
         <h1 style={{
             fontSize:'45px',
             fontWeight:'550',
-            color:'rgb(74, 74, 74)',
+            color:'#2e62bb',
             textAlign:'center',
             
         }}>Potencia tus ideas!</h1>
@@ -16,7 +16,8 @@ export const Tittle = () => {
             marginTop:'20px auto',
             width:'70%',
             textAlign:'center',
-            margin:'12px'
+            margin:'12px',
+            color:'#fff',
         }}>Cafecito es una plataforma de crowdfunding que busca unir a creadores de contenido, ONGs o proyectos con gente que quiera aportar a lo que hacen.</p>
         <div style={{
             display:'flex',
@@ -34,7 +35,7 @@ export const Tittle = () => {
                 height:'40px',
             }}/>
             <button className="btn" style={{
-                backgroundColor:'#7c64bf',
+                backgroundColor:'#2e62bb',
                 borderRadius:'6px',
                 border:0,
                 color:'#fff',

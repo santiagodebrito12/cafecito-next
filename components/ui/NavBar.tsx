@@ -2,6 +2,7 @@ import React,{useState,useContext} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/logo.svg'
+import { ThemeIcons } from './ThemeIcons';
 
 
 
@@ -27,7 +28,7 @@ export const NavBar = () => {
                 </Link>
                 <h3 className="titulo " style={{
                     fontWeight:"600",
-                    color:'#4a4a4a',
+                    color:'#2e62bb',
                     marginLeft:'10px',
                 }} >waves4gifts</h3>   
             </div>
@@ -43,8 +44,8 @@ export const NavBar = () => {
                     alignItems:'center',
                 }}>
                 {/* <li className="btn mt-2" onClick={()=>{
-                    setTheme();
-                }}><ThemeIcon/></li> */}
+                    
+                }}><ThemeIcons/></li> */}
                 <li className="btn" style={{
                     padding:'10px 20px',
                 }}><Link className="links explorar" href="/explore">Explorar</Link></li>

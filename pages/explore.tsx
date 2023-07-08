@@ -42,9 +42,13 @@ export default function Explore (){
       {users.map((user,i):ReactNode=>{
         
         return(
-          <Link href={`/user/${user._id}`} key={i} className="card card-usuario">
+          <Link href={`/user/${user._id}`} key={i} className="card card-usuario" id="card" style={{
+            textDecoration:'none',
+          }}>
 
-          <li  >
+          <li  style={{
+            listStyle:'none',
+          }}>
           <div className="contendor-img">
               <Image src={user.img} alt="imagen-usuario" className="imagen-usuario" width={75} height={71}/>
           </div>

@@ -6,7 +6,7 @@ export const Section1 = () => {
     <div className="contenedor-seccion p-2">
             <h2 className="text-center titulo-seccion mt-3">¿Cómo funciona Cafecito?</h2>
             <div className="contenedor-explicacion w-100 mt-4">
-                <Image src={img} alt="imagen-seccion" className="imagen-seccion"/>
+                {/* <Image src={img} alt="imagen-seccion" className="imagen-seccion"/> */}
                 <div className=" contenedor-parrafos">
                     <div>
                         <h3>Creá tu cuenta</h3>

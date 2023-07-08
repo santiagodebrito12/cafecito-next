@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { Layout } from '@/components/layout'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { IUser, User } from '@/models'
@@ -6,28 +6,35 @@ import { getUsers, getUserById } from '@/utils';
 import  usersApi  from '@/apis';
 import { get } from 'http';
 import {DetailHeader,DescriptionDetail,Donaciones} from '@/components/ui/UserDetail'
+import { Content } from '@/components/ui/UserDetail/Content';
+
 
 interface HomeProps {
   user:IUser
 }
 
 export default function UserPage ({user}:HomeProps) {
-   
-    return (
+  const [detailState, setdetailState] = useState('perfil')
+  
+  return (
     <Layout>
       
       <div className="contenedor-perfil  ">
                 
-                <DetailHeader user={user}/>
+                <DetailHeader user={user} setdetailState={setdetailState}/>
+                  
+                 
 
-                 <div className="row  contenedor-info d-flex justify-content-center">
+                {detailState==='perfil'
+                ? <div className="row  contenedor-info d-flex justify-content-center">
                    
                     <DescriptionDetail user={user}/>
 
 
                     <Donaciones user={user}/>
-               
-                </div>
+           
+                  </div>
+                :<Content user={user}/>}
         </div>
       
     </Layout>
