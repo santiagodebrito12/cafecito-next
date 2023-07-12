@@ -3,7 +3,7 @@ import img from '../../assets/foto-seccion.svg'
 
 export const Section1 = () => {
   return (
-    <div className="contenedor-seccion p-2">
+    <div className="container contenedor-seccion p-2">
             <h2 className="text-center titulo-seccion mt-3">¿Cómo funciona Cafecito?</h2>
             <div className="contenedor-explicacion w-100 mt-4">
                 <Image src={img} alt="imagen-seccion" className="imagen-seccion"/>

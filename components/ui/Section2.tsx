@@ -29,7 +29,7 @@ export const Section2 = () => {
   
                           
     return (
-        <div className="  contenedor-seccion2 ">
+        <div className=" container contenedor-seccion2 ">
             <h2 className="text-center">¿Que dicen de Cafecito?</h2>
          
             <div className="contenedor-comentarios">
