@@ -5,7 +5,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Provider } from 'react-redux'
 import { store } from '@/store'
+import { Query } from 'mongoose'
+import { QueryClientProvider,QueryClient } from 'react-query'
 
+const queryCLient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,10 +20,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <Link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"/>
       <Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"  />
   </Head>
-  
+  <QueryClientProvider client={queryCLient}>
   <Provider store={store}>
+  
   <Component {...pageProps} />
   </Provider>
+  </QueryClientProvider>
+
 
 
   
