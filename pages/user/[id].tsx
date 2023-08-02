@@ -25,8 +25,8 @@ export default function UserPage ({user}:HomeProps) {
                   
                  
 
-                {detailState==='perfil'
-                ? <div className="row  contenedor-info d-flex justify-content-center">
+               
+                <div className="row  contenedor-info d-flex justify-content-center">
                    
                     <DescriptionDetail user={user}/>
 
@@ -34,7 +34,7 @@ export default function UserPage ({user}:HomeProps) {
                     <Donaciones user={user}/>
            
                   </div>
-                :<Content user={user}/>}
+                
         </div>
       
     </Layout>

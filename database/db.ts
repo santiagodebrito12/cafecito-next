@@ -9,6 +9,7 @@ import mongoose from 'mongoose';
 const mongoConection ={
     isConnected: 0,
 }
+
 export const connect = async () => {
     if (mongoConection.isConnected !== 0) {
       

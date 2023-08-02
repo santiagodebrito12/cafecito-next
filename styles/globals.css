@@ -22,24 +22,195 @@ body, html {
   transition: 3s all ease;
   color: var(--textGray);
   font-weight: 600;
+  overflow-x: hidden;
 } 
+/*header*/
+header,nav{
+  transition: 3s all ease-in-out;
+}
+#ingresar{
+  color: white;
+}
+.burguer{
+  font-size: 20px;
+}
+body.dark .burguer-dark{
+  color: white;
+}
+
+.contenedor-header{
+  padding: 0px 30px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width: 20px;
+}
+.titulo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-left: 15px;
+ 
+}
 
 .links{
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--textGray);
-  font-family: var(--fontPrincipal) !important;
-}
-.links:hover{
-  color: var(--textGray);
 }
 
-.ingresar{
-  background-color: #8fa2cc;
-  color: white;
-  padding: 5px 10px;
+  
+  nav.close{
+     display: none ;
+     height: 0;
+     overflow: hidden;
+     transition: 3s all ease;
+  }
+
+  nav.open{
+      display: flex;
+      position: fixed;
+      z-index: 500;
+      top: 50px;
+      left: 0px;
+      width: 100%;
+      height: 250px;
+      background-color: var(--background);
+  }
+  body.dark nav.open{
+      background-color:rgb(59, 49, 73);
+  }
+  nav ul{
+      margin-top: 2%;
+      height: 80%;
+      width: 100%;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+ nav ul li{
+  margin: 12px 0px;
+ }
+
+ nav ul li a{
+     margin: 5%;
+     padding: 10px;
+     color: var(--textGray);
+     text-decoration: none;
+    
+     
+ }
+ nav ul li:hover{
+     border-bottom: 2px solid var(--textGray);
+     text-decoration: none;
+ }
+      
+  body.dark  nav ul li:hover{
+      border-bottom: 2px solid rgb(184, 173, 210);
+  }
+  .contenedor-bars{
+      cursor: pointer;
+  }
+  nav.open #ingresar-header{
+      color: var(--textGray);
+      
+  }
+  body.dark nav.open #ingresar-header{
+      color: rgb(184, 173, 210);
+  }
+  .menu-icon{
+    display: block;
+  }
+
+  .menu-icon{
+ 
+    cursor: pointer;
+  }
+  .links{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--textGray);
+    font-family: var(--fontPrincipal) !important;
+  }
+  .links:hover{
+    color: var(--textGray);
+  }
+  
+  .ingresar{
+    background-color: #8fa2cc;
+    color: white;
+    padding: 5px 10px;
+  }
+
+@media (min-width:768px){    
+
+  .contenedor-header{
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* width: 80% !important; */
+  }
+
+  .logo{
+    flex: 2;
+  }
+  nav{
+    flex: 2;
+    height: 100px;
+  }
+  nav.close{
+    display: block;
+    height: auto;
+  }
+
+ nav ul{
+      margin-top: 2%;
+      height: 80%;
+      width: 100%;
+      min-height: 120px;
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: space-around;
+  }
+
+
+
+  nav ul li{
+      margin: 5px 20px;
+  }
+  
+  
+  .ingresar{
+      background-color: white;
+      color: #4a4a4a;
+      padding: 5px 10px;
+  }
+  
+
+ 
+  .menu-icon{
+    display: none;
+  }
+
 }
+@media(min-width:768px){
+  .contenedor-header{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 60% !important; */
+}
+}
+
 
 /*section 1*/
 .titulo-seccion{
@@ -56,13 +227,87 @@ body, html {
   font-weight: bolder;
   
 }
-@media (max-width:767px){
-  .contenedor-explicacion{
+/*Main*/
+div.contenedor-main h1{
+  font-size: 24px;
+  font-weight: 550;
+  color:rgb(74, 74, 74);
+  text-align: center;
+  
+}
+div.contenedor-main p{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+div.contenedor-main div{
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+div.contenedor-main div .btn-crear-cuenta{
+  text-decoration: none;
+  background-color: #7c64bf;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+
+  padding: 4px 34px;
+  display: block;
+  font-weight: 400;
+  height: 40px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;  
+
+}
+
+
+@media (min-width:540px) and (max-width:1023px){
+  div.contenedor-main{
+    width: 80%;
+    margin: 14px auto;
+  }
+
+  div.contenedor-main h1{
+      font-size: 34px;
+  }
+  div.contenedor-main p{
+    font-size: 18px;
+  }
+  div.contenedor-main div .btn-crear-cuenta{
+    padding: 6px 56px;
+    font-size: 16px;
+    
+  }
+}
+@media (min-width:1024px){
+  div.contenedor-main{
+    width: 60%;
+    margin: 14px auto;
+  }
+  div.contenedor-main h1{
+      font-size: 40px;
+  }
+  div.contenedor-main p{
+    font-size: 18px;
+  }
+  div.contenedor-main div .btn-crear-cuenta{
+    padding: 6px 56px;
+    font-size: 16px;
+  }
+}
+
+/*main*/
+/*Seccion 1*/
+
+.contenedor-explicacion{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  }
 }
 
 .contenedor-parrafos{
@@ -76,16 +321,20 @@ body, html {
 }
 .imagen-seccion{
   width: 200px;
-  
+  height: 200px;
 }
+
 @media (min-width:768px) and (max-width:1023px){
   .imagen-seccion{
       width: 350px;
+      height: 350px;
   }
+
   .contenedor-explicacion{
       width: 60%;
       display: flex;
-      justify-content: space-around;   
+      justify-content: space-around; 
+      flex-direction: column;  
   }
   .contenedor-parrafos{
      
@@ -102,6 +351,7 @@ body, html {
   width: 60%;
   display: flex;
   justify-content: space-around;
+  flex-direction: initial;
   
 }
 .titulo-seccion{
@@ -109,7 +359,8 @@ body, html {
   color:#7c64bf;
 }
 .imagen-seccion{
-  width: 550px;
+  width: 500px;
+  height: 500px;
 }
 .contenedor-parrafos{
   height: 400px;
@@ -127,6 +378,7 @@ body, html {
   font-size: 20px;
 }
 }
+
 .seccion1-bg{
   background-color: rgba(198,221,244,.1);
 }
@@ -141,7 +393,7 @@ body, html {
    -webkit-box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
    box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
    border-radius: 6px;
-   padding: 20px 32px;
+   padding: 16px 32px;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
    text-decoration: none;

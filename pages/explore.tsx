@@ -11,19 +11,43 @@ import Slider from "@/components/ui/Slider"
 import Image from "next/image";
 import { Input } from "@mui/material"
 import { useSelector } from "react-redux";
-
+import { SetStateAction } from "react";
 import{useQuery} from 'react-query';
 import Skeleton from "react-loading-skeleton"
+import { set } from "mongoose"
 
 export default function Explore (){
   
-
-  
+  const [data,setData]=useState<User[]>([]);
+  const[isLoading,setIsLoading]=useState(false);
+  const [busqueda,setBusqueda]=useState('');
+  const[userBusqueda,setUserBusqueda]=useState<User>();
   const{categoriaSelect}=useSelector((state:any)=>state.categoriaSelect);
-  const {data,isLoading} = useQuery('users',()=>getUsers());
-  console.log(data)
+  // const {data,isLoading} = useQuery('users',()=>getUsers());
   
+  const handleBusqueda = ()=>{
+      data.filter((user:User)=>{
+        if(user.nombre.toLowerCase().includes(busqueda.toLowerCase())){
+        
+          return user
+        }
+      })
+  }
  
+
+  useEffect(()=>{
+    setIsLoading(true);
+    getUsers()
+      
+      .then((res:SetStateAction<User[]>)=>{
+        setIsLoading(false);
+        setData(res)
+      })
+      .catch((err:any)=>{
+        console.log(err)
+      })
+      
+  },[])
 
   if(isLoading){
     return(
@@ -250,6 +274,7 @@ export default function Explore (){
             fontSize:'16px',
             padding:'8px',
            }}
+           onChange={(e)=>setBusqueda(e.target.value)}
            />
           <button
           style={{
@@ -265,6 +290,10 @@ export default function Explore (){
             fontWeight:'400',
             cursor:'pointer',          
                   }}
+            onClick={()=>{
+            handleBusqueda();
+             
+          }}
           >Buscar</button>
          
         </div>

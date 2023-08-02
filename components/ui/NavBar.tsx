@@ -4,44 +4,36 @@ import Link from 'next/link';
 import logo from '../../assets/logo.svg'
 
 
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 
 export const NavBar = () => {
-  
+    const [open, setOpen] = useState(false);
+
+    const handleOpen  = () =>{
+        if(!open){
+            setOpen(true);
+        }else{
+            setOpen(false);
+        }
+    }
 
     return (
-        <div className="container contenedor-header d-flex justify-content-around m-auto">
-           
-            <div className="d-flex logo p-2 mt-1" style={{
-                display:'flex',
-                justifyContent:'center',
-                alignItems:'center',
-                padding:'10px 20px',
-                marginTop:'40px',
-            }}>
-                <Link href="/" style={{
-                    marginTop:'-10px'
-                }}>
+        <div className="container-sm container-md container contenedor-header d-flex justify-content-between m-auto align-items-center">
+          
+            <div className="d-flex logo p-2 mt-1" >
+                <Link href="/" >
                 <Image src={logo} alt="logo" />
                 </Link>
-                <h3 className="titulo " style={{
-                    fontWeight:"600",
-                    color:'#4a4a4a',
-                    marginLeft:'10px',
-                }} >Cafecito</h3>   
+            
+                <h3 className="titulo "  >Cafecito</h3>   
             </div>
-          
-            <nav className='mt-2 p-1 open' style={{
-               
-                marginTop:'20px',
-                padding:'10px 20px',
-            }}>
-                <ul style={{
-                    display:'flex',
-                    justifyContent:'center',
-                    alignItems:'center',
-                }}>
+    
+            <nav className={open ? 'mt-2 p-1 open' : 'mt-2 p1 close'} 
+            >
+              
+                <ul >
                 {/* <li className="btn mt-2" onClick={()=>{
                     setTheme();
                 }}><ThemeIcon/></li> */}
@@ -54,6 +46,9 @@ export const NavBar = () => {
                 }}>Ingresar</Link></li>
                 </ul>
             </nav>
+            <MenuIcon className="menu-icon" onClick={handleOpen}/>
+           
+
             
         </div>
     )

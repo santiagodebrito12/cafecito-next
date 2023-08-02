@@ -21,11 +21,11 @@ export const DetailHeader = ({user,setdetailState}:UserDetailProps) => {
         }} onClick={()=>{
           setdetailState('perfil')
         }}>Perfil</h3>
-        <h3 style={{
+        {/* <h3 style={{
           cursor:'pointer'
         }} onClick={()=>{
           setdetailState('contendio')
-        }}>Contenido</h3>
+        }}>Contenido</h3> */}
         </div>
     
         </div>
