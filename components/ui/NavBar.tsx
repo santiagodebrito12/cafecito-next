@@ -20,6 +20,8 @@ export const NavBar = () => {
     }
 
     return (
+        <div className='contenedor-navbar'>
+
         <div className="container-sm container-md container contenedor-header d-flex justify-content-between m-auto align-items-center">
           
             <div className="d-flex logo p-2 mt-1" >
@@ -50,6 +52,7 @@ export const NavBar = () => {
            
 
             
+        </div>
         </div>
     )
 }

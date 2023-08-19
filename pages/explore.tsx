@@ -85,7 +85,7 @@ export default function Explore (){
             backgroundColor:'rgb(124, 100, 191)',
             borderRadius:'6px',
             border:'0px',
-            color:'rgb(255, 255, 255)',
+            color:'#4d648d',
             fontSize:'16px',
             padding:'6px 56px',
             display:'block',
@@ -298,7 +298,7 @@ export default function Explore (){
          
         </div>
   
-        <div className="container">
+        <div className="container ">
         
         
         <ul className="d-flex flex-wrap justify-content-center">

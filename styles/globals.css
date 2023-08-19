@@ -1,7 +1,17 @@
 
+/*nueva paleta*/
+/*
+background:#1F3A5F
+navbar: #4d648d
+lightblue #acc2ef
+grey #1f2b3e
+ligthgrey-card #374357;
+
+*/
 :root  {
-  --background: #ededed;
-  --boxBackground: #fff;
+
+  --secondBackground: #1f2b3e;
+  --boxBackground: #0F1C2E
   --textBlack: #000;
   --textGray: #4a4a4a;
   --textBlue: #147cbb;
@@ -17,10 +27,10 @@ body, html {
   margin:0; 
   padding:0; 
   min-height:calc(100vh); 
-  background-color: var(--boxBackground);
+  background-color: #0F1C2E !important;
   font-family: var(--fontPrincipal) !important;
   transition: 3s all ease;
-  color: var(--textGray);
+  color: #fff;
   font-weight: 600;
   overflow-x: hidden;
 } 
@@ -37,7 +47,10 @@ header,nav{
 body.dark .burguer-dark{
   color: white;
 }
-
+.contenedor-navbar{
+  width: 100%;
+  background-color: var(--secondBackground);
+}
 .contenedor-header{
   padding: 0px 30px;
   height: 80px;
@@ -53,6 +66,7 @@ body.dark .burguer-dark{
   font-size: 1.5rem;
   font-weight: bolder;
   margin-left: 15px;
+  color: #4d648d;
  
 }
 
@@ -78,7 +92,7 @@ body.dark .burguer-dark{
       left: 0px;
       width: 100%;
       height: 250px;
-      background-color: var(--background);
+      background-color: var(--secondBackground);
   }
   body.dark nav.open{
       background-color:rgb(59, 49, 73);
@@ -100,7 +114,7 @@ body.dark .burguer-dark{
  nav ul li a{
      margin: 5%;
      padding: 10px;
-     color: var(--textGray);
+     color: #f5f5f5;
      text-decoration: none;
     
      
@@ -135,7 +149,7 @@ body.dark .burguer-dark{
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    color: var(--textGray);
+    color: #f5f5f5;
     font-family: var(--fontPrincipal) !important;
   }
   .links:hover{
@@ -189,8 +203,8 @@ body.dark .burguer-dark{
   
   
   .ingresar{
-      background-color: white;
-      color: #4a4a4a;
+      background-color: #4d648d;
+      color: #f5f5f5;
       padding: 5px 10px;
   }
   
@@ -215,7 +229,7 @@ body.dark .burguer-dark{
 /*section 1*/
 .titulo-seccion{
   font-weight: bold;
-  color:#7c64bf;
+  color:#4d648d;
   margin-top: 15px;
 }
 .contenedor-seccion{
@@ -225,13 +239,17 @@ body.dark .burguer-dark{
 }
 .contenedor-parrafos h3{
   font-weight: bolder;
-  
+  color:#4d648d;
 }
+.contenedor-parrafos p{
+  color:#f5f5f5;
+}
+
 /*Main*/
 div.contenedor-main h1{
   font-size: 24px;
   font-weight: 550;
-  color:rgb(74, 74, 74);
+  color:#4d648d;
   text-align: center;
   
 }
@@ -239,6 +257,8 @@ div.contenedor-main p{
   font-size: 14px;
   text-align: center;
   margin-top: 8px;
+  color:#f5f5f5;
+  
 }
 div.contenedor-main div{
   display: flex;
@@ -249,7 +269,7 @@ div.contenedor-main div{
 }
 div.contenedor-main div .btn-crear-cuenta{
   text-decoration: none;
-  background-color: #7c64bf;
+  background-color: #3D5A80;
   border-radius: 8px;
   color: #fff;
   font-size: 12px;
@@ -356,7 +376,7 @@ div.contenedor-main div .btn-crear-cuenta{
 }
 .titulo-seccion{
   font-weight: bold;
-  color:#7c64bf;
+  color:#4d648d;
 }
 .imagen-seccion{
   width: 500px;
@@ -398,7 +418,8 @@ div.contenedor-main div .btn-crear-cuenta{
    box-sizing: border-box;
    text-decoration: none;
    display: block;
-   color: #000;
+   background: #1f2b3e !important;
+   color: #fff !important;
    width: 95%;
    height: auto;
 }
@@ -764,7 +785,7 @@ footer{
   bottom: 0vh;
   width: 100%;
   margin-top: 180px;
-  background-color: #f9f9f9;
+  background-color: var(--secondBackground);
   padding: 30px;
   display: flex;
   justify-content: space-between;
