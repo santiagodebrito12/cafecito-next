@@ -24,7 +24,7 @@ export const NavBar = () => {
 
         <div className="container-sm container-md container contenedor-header d-flex justify-content-between m-auto align-items-center">
           
-            <div className="d-flex logo p-2 mt-1" >
+            <div className="d-flex logo p-2 mt-1 contenedor-logo" >
                 <Link href="/" >
                 <Image src={logo} alt="logo" className='logo'/>
                 </Link>
@@ -32,7 +32,7 @@ export const NavBar = () => {
                 <h3 className="titulo "  >Waves</h3>   
             </div>
     
-            <nav className={open ? 'mt-2 p-1 open' : 'mt-2 p1 close'} 
+            <nav className={open ? 'mt-2 p-1 open' : 'mt-2 pt-1 close'} 
             >
               
                 <ul >

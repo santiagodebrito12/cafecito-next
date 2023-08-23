@@ -50,7 +50,8 @@ body.dark .burguer-dark{
 .contenedor-navbar{
   width: 100%;
   background-color: var(--secondBackground);
-}
+  
+  }
 .contenedor-header{
   padding: 0px 30px;
   height: 80px;
@@ -76,7 +77,10 @@ body.dark .burguer-dark{
   font-weight: bold;
   text-decoration: none;
 }
-
+.contenedor-logo{
+  box-sizing: content-box;
+  
+}
   
   nav.close{
      display: none ;
@@ -140,12 +144,10 @@ body.dark .burguer-dark{
   }
   .menu-icon{
     display: block;
-  }
-
-  .menu-icon{
- 
+    color: white;
     cursor: pointer;
   }
+
   .links{
     font-size: 1.2rem;
     font-weight: bold;
@@ -193,7 +195,7 @@ body.dark .burguer-dark{
       display: flex;
       flex-direction: initial;
       align-items: center;
-      justify-content: space-around;
+      justify-content: flex-end;
   }
 
 
@@ -234,7 +236,7 @@ body.dark .burguer-dark{
   margin-top: 15px;
 }
 .contenedor-seccion{
-  margin: 50px auto 0px auto;
+  margin: 44px auto 0px auto;
   
   width: 100%;   
 }
@@ -252,6 +254,7 @@ div.contenedor-main h1{
   font-weight: 550;
   color:var(--textBlue);
   text-align: center;
+  margin: 44px 0px;
   
 }
 div.contenedor-main p{
@@ -378,6 +381,7 @@ div.contenedor-main div .btn-crear-cuenta{
 .titulo-seccion{
   font-weight: bold;
   color:var(--textBlue);
+  margin-top: 44px;
 }
 .imagen-seccion{
   width: 500px;
