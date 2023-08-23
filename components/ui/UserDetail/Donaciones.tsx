@@ -1,6 +1,6 @@
 import { IUser } from "@/models"
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/waves.svg';
 import Image from "next/image";
 
 interface UserDetailProps {

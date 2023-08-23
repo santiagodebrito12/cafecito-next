@@ -1,7 +1,7 @@
 import React,{useState,useContext} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/waves.svg'
 
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -26,10 +26,10 @@ export const NavBar = () => {
           
             <div className="d-flex logo p-2 mt-1" >
                 <Link href="/" >
-                <Image src={logo} alt="logo" />
+                <Image src={logo} alt="logo" className='logo'/>
                 </Link>
             
-                <h3 className="titulo "  >Cafecito</h3>   
+                <h3 className="titulo "  >Waves</h3>   
             </div>
     
             <nav className={open ? 'mt-2 p-1 open' : 'mt-2 p1 close'} 

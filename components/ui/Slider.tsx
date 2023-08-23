@@ -1,9 +1,9 @@
 import React,{useContext,useState,useEffect} from 'react'
 import Link from 'next/link'
-import arte from '@/assets/categorias/arte.svg'
-import blog from '@/assets/categorias/blog.svg'
-import ciencia from '@/assets/categorias/ciencia.svg'
-import comic from '@/assets/categorias/comic.svg'
+import surfing from '@/assets/categorias/surfing.svg'
+import kitesurfing from '@/assets/categorias/kitesurfing.svg'
+import photography from '@/assets/categorias/camera.svg'
+import climbing from '@/assets/categorias/climbing.svg'
 import comida from '@/assets/categorias/comida.svg'
 import deportes from '@/assets/categorias/deportes.svg'
 import hardware from '@/assets/categorias/hardware.svg'
@@ -15,41 +15,22 @@ import { setCategoria } from '@/store/slices/categorias'
 
 const arr =  [
     {
-        categoria:"arte",
-        icono: arte
+        categoria:"surfing",
+        icono: surfing
     },
     {
-        categoria:"blog",
-        icono: blog
+        categoria:"photography",	
+        icono: photography
     },
     {
-        categoria:"streaming",
-        icono: blog
+        categoria:"kitesurfing",
+        icono: kitesurfing
     },
     {
-        categoria:"arquitectura",
-        icono: blog
+        categoria:"climbing",
+        icono: climbing
     },
-    {
-        categoria:"ciencia",
-        icono: ciencia
-    },
-    {
-        categoria:"comic",
-        icono: comic
-    },
-    {
-        categoria:"comida",
-        icono: comida
-    },
-    {
-        categoria:"deportes",
-        icono: deportes
-    },
-    {
-        categoria:"hardware",
-        icono: hardware
-    },
+   
 ]
 
 
@@ -93,12 +74,12 @@ const Slider = () => {
                                    
                                      if(categoria === c.categoria) {
                                         return(
-                                            <Image src={c.icono} alt="icono" width={50} height={50} key={i}/>
+                                            <Image src={c.icono} alt="icono" width={40} height={40} key={i} className="iconos"/>
                                         )
                                      }
                                 })}
 
-                                <p className="text-center text-uppercase">{categoria}</p>
+                                <p className="text-center text-uppercase text-categoria">{categoria}</p>
                             </li>
                             </Link>
 

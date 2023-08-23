@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: false,
   images:{
-    domains:["cdn.cafecito.app"]
+ 
+    domains:["res.cloudinary.com","cdn.cafecito.app"],
+   
   },
 }
-
 module.exports = nextConfig
