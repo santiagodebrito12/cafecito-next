@@ -13,7 +13,7 @@ export const Donaciones = ({user}:UserDetailProps) => {
     <div className="contenedor-donacion col-4">
        <div>
             
-            <h1 className=" descripcion mt-3">Tomamos un Cafecito ? </h1>
+            <h1 className=" descripcion mt-3">Do you want to share a wave? </h1>
             <div className="w-50 d-flex ">
             <div className="m-2">
               
@@ -36,11 +36,11 @@ export const Donaciones = ({user}:UserDetailProps) => {
                
             }}>
                 <form>
-                <input type="text" placeholder="Nombre (opcional)" className="w-100" name="nombre"/>
-                <input type="number" placeholder="Contacto (opcional, campo oculto al publico)"className="w-100" name="contacto"  />
-                <textarea placeholder="Mensaje (opcional) "className="w-100" name="mensaje"  ></textarea>
+                <input type="text" placeholder="Name (opcional)" className="w-100" name="nombre"/>
+                <input type="number" placeholder="Contact "className="w-100" name="contacto"  />
+                <textarea placeholder="Message (opcional) "className="w-100" name="mensaje"  ></textarea>
                 <button className="w-50 d-block m-auto" type="submit"
-                >Invitame un cafecito!</button>
+                >Gift me a wave!</button>
                 </form>
             </div>
             </div>

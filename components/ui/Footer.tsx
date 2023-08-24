@@ -9,11 +9,11 @@ export const Footer = () => {
    
    <footer className='footer'>
     <div className="contenedor-derechos">
-        <p>© 2021 Cafecito.</p>
+        <p>© 2023 Waves.</p>
         <div>
             <ul className="lista-derechos">
-            <li><a href="#"> Preguntas Frecuentes</a></li>
-            <li><a href="#">Terminos y politica de privacidad</a></li>
+            <li><a href="#">Questions</a></li>
+            <li><a href="#">Terms and privacy policy</a></li>
             </ul>
         </div>
     </div>

@@ -517,6 +517,7 @@ div.contenedor-main div .btn-crear-cuenta{
 }
 .text-categoria{
   color:var(--textBlue);
+  
 }
 .contenedor-explore{
       margin-top: 150px;
@@ -688,7 +689,7 @@ body.dark .contenedor-donacion{
   height: 32px;
 }
 .contendor-botones button{
-  background-color: #8fa2cc;
+  background-color: var(--textBlue);
   border: 0;
   border-radius: 6px;
   color: #fff;
@@ -714,7 +715,7 @@ body.dark .contenedor-donacion{
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  background-color: #8fa2cc;
+  background-color: var(--textBlue);
   color: #fff;
   width: 100%;
   border-radius: 4px;
@@ -750,7 +751,7 @@ body.dark .contenedor-donacion{
 }
 .contenedor-detalles-nombre h1,.contenedor-detalles-nombre p,.contenedor-detalles-nombre h3{
       font-weight: 700;
-  
+      color: white;
 }
 .contenedor-detalles-nombre h1{
   font-size: 25px;
@@ -761,8 +762,8 @@ body.dark .contenedor-donacion{
 }
 .contenedor-detalles-nombre h3{
  font-size: 20px;
-  color: #7c64bf;
-  border-bottom: 2px solid #7c64bf;
+  color: var(--textBlue);
+  border-bottom: 2px solid var(--textBlue);
 }
 .img-usuario{
   border-radius: 50%;
@@ -774,6 +775,7 @@ body.dark .contenedor-donacion{
   padding: 16px;
   border: 1px solid hsla(0,0%,86.3%,.3);
   margin-top: 25px;
+  color: white;
 }
 .descripcion{
   font-size: 18px;
@@ -808,7 +810,7 @@ footer{
   display: flex;
 }
 .contenedor-derechos p , .lista-derechos li a{
-  color: rgb(184, 173, 210);
+  color:var(--textBlue);
   font-weight: 700;
   text-decoration: none;
 }
@@ -816,6 +818,7 @@ footer{
 .lista-redes{
   list-style: none;   
   width: 150px;
+  color: var(--textBlue);
 }
 .lista-derechos{
   list-style: none;
@@ -823,13 +826,14 @@ footer{
 
 @media (max-width:425px){
   .contenedor-derechos p , .lista-derechos li a{
-      color: rgb(184, 173, 210);
+      color: var(--textBlue);
       font-weight: 700;
       font-size: 15px;
   }
   .lista-redes{
       list-style: none;   
       width: 80px;
+      
   }
 }
 

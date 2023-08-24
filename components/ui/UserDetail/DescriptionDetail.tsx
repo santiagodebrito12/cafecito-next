@@ -1,6 +1,6 @@
 import { IUser } from "@/models"
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/waves.svg';
 
 import twiter from '@/assets/twiter.svg';
 import insta from '@/assets/insta.svg';
@@ -15,7 +15,7 @@ export const DescriptionDetail = ({user}:UserDetailProps) => {
   return (
  
     <div className="contenedor-descripcion col-6">
-    <h1 className=" descripcion">Descripcion : </h1>
+    <h1 className=" descripcion">Description: </h1>
     <p>{user.descripcion}</p>
 
     <div className="list-redes">

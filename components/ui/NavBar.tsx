@@ -41,11 +41,11 @@ export const NavBar = () => {
                 }}><ThemeIcon/></li> */}
                 <li className="btn" style={{
                     padding:'10px 20px',
-                }}><Link className="links explorar" href="/explore">Explorar</Link></li>
+                }}><Link className="links explorar" href="/explore">Explore</Link></li>
                 <li className="btn ingresar"><Link className=" links ingresar" href="/auth" id="ingresar-header" style={{
                     padding:"10px 20px",
                     borderRadius:'5px',
-                }}>Ingresar</Link></li>
+                }}>Login</Link></li>
                 </ul>
             </nav>
             <MenuIcon className="menu-icon" onClick={handleOpen}/>

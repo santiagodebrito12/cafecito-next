@@ -74,7 +74,7 @@ const Slider = () => {
                                    
                                      if(categoria === c.categoria) {
                                         return(
-                                            <Image src={c.icono} alt="icono" width={40} height={40} key={i} className="iconos"/>
+                                            <Image src={c.icono} alt="icono" width={30} height={30} key={i} className="iconos"/>
                                         )
                                      }
                                 })}

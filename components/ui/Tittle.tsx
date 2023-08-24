@@ -4,12 +4,12 @@ export const Tittle = () => {
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center contenedor-main ">
      
-        <h1 >Potencia tus ideas!</h1>
-        <p >Cafecito es una plataforma de crowdfunding que busca unir a creadores de contenido, ONGs o proyectos con gente que quiera aportar a lo que hacen.</p>
+        <h1 >Boost your passion!</h1>
+        <p >Waves is a crowdfunding platform that seeks to promote the career of extreme athletes.</p>
         <div> 
        
             <Link href="/auth" className="btn-crear-cuenta" >
-                Crear cuenta
+                Sing Up
             </Link>
         </div>
     </div>

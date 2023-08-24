@@ -1,27 +1,27 @@
 import Image from 'next/image';
-import usuario1 from '@/assets/usuarios/usuario1.jpg';
-import usuario2 from '@/assets/usuarios/usuario2.jpg';
-import usuario3 from '@/assets/usuarios/usuario3.jpg';
+import usuario1 from '@/assets/usuarios/natasha.jpg';
+import usuario2 from '@/assets/usuarios/italo.jpg';
+import usuario3 from '@/assets/usuarios/bruno-nunez.jpg';
 
 
 const comentarios = [
     {
-        nombre: 'Hernán Panessi',
+        nombre: 'Natasha Niebieskikwiat',
         img:usuario1,
-        categoria:'Periodismo',
-        comentario:'Cafecito es una plataforma facilitadora: acerca, simplifica y amplifica. En lo personal, como periodista, me dio la mayor de las alegrías posibles: permitir que mis libros vuelvan a circular y que terminaran encontrando más (y nuevos) lectores.',
+        categoria:'kitesurfing',
+        comentario:'Waves is an amazing platform: it brings you closer, simplifies and amplifies. Personally, as a surfer, it gave me the greatest possible joy: allowing me to share my passion for surfing and content creation.',
     },
     {
-        nombre: 'Bauhasaurus',
+        nombre: 'Italo Ferreira',
         img:usuario2,
-        categoria:'Arquitectura',
-        comentario:'Cafecito permite sustentar tus proyectos de una manera intuitivamente sencilla: Tendiendo un puente retórico entre invitar a alguien a tomar algo en forma de agradecimiento y una aplicación digital. Parece difícil que algo analógico tenga resonancia en lo digital, pero Cafecito lo logra.',
+        categoria:'surfing',
+        comentario:'Waves permite sustentar tus proyectos de una manera intuitivamente sencilla: Tendiendo un puente retórico entre invitar a alguien a tomar algo en forma de agradecimiento y una aplicación digital. Parece difícil que algo analógico tenga resonancia en lo digital, pero Waves lo logra.',
     },
     {
-    nombre: 'Nillusart',
+    nombre: 'Bruno Nunez',
     img:usuario3,
-    categoria:'Arte',
-    comentario:'Cafecito es una plataforma que ayuda mucho a los emprendedores y creadores de contenido. Yo lo encontré como una forma de conectarme con mis seguidores donde ellos pueden ayudarme a seguir creando con su aporte y mejorar mí espacio de trabajo.',
+    categoria:'climbing',
+    comentario:'Waves es una plataforma que ayuda muchos atletas extremos. Yo lo encontré como una forma de conectarme con mis seguidores donde ellos pueden ayudarme a seguir creando con su aporte.',
     }
 ]
 
