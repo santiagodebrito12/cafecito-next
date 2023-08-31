@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import img from '../../assets/foto-seccion.svg'
+import img from '../../assets/extreme_sports.svg'
 
 export const Section1 = () => {
   return (

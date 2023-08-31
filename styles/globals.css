@@ -164,6 +164,9 @@ body.dark .burguer-dark{
     color: white;
     padding: 5px 10px;
   }
+  .contenedor-input-busqueda{
+    flex-direction: column;
+  }
 
 @media (min-width:768px){    
 
@@ -542,11 +545,15 @@ div.contenedor-main div .btn-crear-cuenta{
   margin: 5px auto;
 }
 .contenedor-text-card{
-  padding: 0.7rem;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.icono-donaciones{
+  margin-right: 5px;
+}
+
 .imagen-usuario{
   width: 75px;
   height: 71px;
@@ -596,6 +603,22 @@ div.contenedor-main div .btn-crear-cuenta{
   color: #7c64bf;
 
 }
+.contenedor-input-busqueda{
+  flex-direction: column;
+}
+.contenedor-input-busqueda button{
+  margin-top: 12px;
+  padding: 6px 26px;
+}
+@media (min-width:768px){
+  .contenedor-input-busqueda{
+    flex-direction: row;
+  }
+  .contenedor-input-busqueda button{
+    margin-top: 0px;
+    padding: 8px 56px;
+  }
+}
 @media (max-width:540px){
   .card-categoria{
       width: 50%;
@@ -609,7 +632,7 @@ div.contenedor-main div .btn-crear-cuenta{
 @media(min-width:1024px){
 
 .slider{
-  margin: 40px auto;
+  margin: 30px auto 0px;
   width: 80%;
   
   min-height: 100px;
@@ -632,7 +655,9 @@ div.contenedor-main div .btn-crear-cuenta{
 .contenedor-authentificacion {
   margin: 3rem auto 33rem;
 }
-
+.contenedor-authentificacion h2{
+  color: white;
+}
 #btn-nuevo-usuario{
   margin: 1rem auto;
   display: block;
