@@ -6,28 +6,12 @@ import usersApi from '@/apis';
 
 export default function NewUser(){
     
-    const[image,setImage]=useState('')
-    var file:any ;
-   
-    const handleImageChange = async (e:any)=>{
-         file = e.target.files[0];
-                
-    }
+ 
 
 
     const handleSubmit = async (e:any)=>{
         e.preventDefault();
-        try {
-            const res = await usersApi.post('/users',{
-                image:file
-            });
-            const resp = await res;
-            
-            console.log(resp)
-            
-          } catch (error) {
-              console.log(error)
-          }
+      
     }
 
     return(
@@ -54,10 +38,7 @@ export default function NewUser(){
                         
                         <input type="password" className="form-control  p-2 m-2 text-center" id="rpassword" placeholder="Repeat password"/>
                     </div>
-                    <div className="form-group d-flex justify-content-center">
-                        
-                        <input type="file" className="form-control  p-2 m-2 text-center" id="image" placeholder="image" onChange={handleImageChange}/>
-                    </div>
+                    
                   
                    
 
