@@ -140,8 +140,9 @@ body.dark .burguer-dark{
       
   }
   body.dark nav.open #ingresar-header{
-      color: rgb(184, 173, 210);
+      color: var(--textBlue)
   }
+
   .menu-icon{
     display: block;
     color: white;
@@ -657,11 +658,13 @@ div.contenedor-main div .btn-crear-cuenta{
 }
 .contenedor-authentificacion h2{
   color: white;
+  font-size: 24px;
+  font-weight: 650;
 }
 #btn-nuevo-usuario{
   margin: 1rem auto;
   display: block;
-  background-color: #8fa2cc;
+  background-color: var(--textBlue);
   color: white;
   padding: 5px 10px;
 }
@@ -862,3 +865,61 @@ footer{
   }
 }
 
+/*Sign in*/
+.contenedor-sign-in form{
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-sign-in form .form-group input{
+  border-radius: 100px;
+  width: 80%;
+  background-color: var(--secondBackground);
+}
+@media(min-width:768px){
+  .contenedor-sign-in form .form-group input{
+    width: 340px;
+  }
+} 
+
+.contenedor-sign-in{
+  margin: 50px auto;
+  
+}
+.contenedor-sign-in h2{
+  color: white;
+  font-size: 24px;
+  font-weight: 650;
+  
+}
+.contenedor-sign-in .btn-sign-in{
+  padding: 6px 26px;
+  background-color: var(--textBlue);
+  color: white;
+  margin: 8px auto;
+}
+@media(min-width:768px){
+  .contenedor-sign-in .btn-sign-in{
+    padding: 6px 56px;
+ 
+  }
+}
+.contenedor-sign-in .btn-sign-in:hover{
+  background-color: #7d93c4;
+}
+
+/*Login*/
+.contenedor-login{
+  margin: 50px auto;
+  color: white;
+}
+.contenedor-login h2{
+  font-size: 24px;
+  font-weight: 650;
+  text-align: center;
+}
+.contenedor-login .btn-sign-in{
+  padding: 6px 26px;
+  background-color: var(--textBlue);
+  color: white;
+  margin: 8px auto;
+}

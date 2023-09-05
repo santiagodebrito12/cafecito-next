@@ -4,6 +4,7 @@ import { connect } from '../../../database/db';
 import {db} from '@/database';
 import { User } from '@/models';
 import { IUser } from '@/models';
+import uploadToCloudinary from '../../../services/cloudinary.js';
 
 type Data =
 |{  name: string}
@@ -19,7 +20,7 @@ export default function handler(
             return  getUsers(res)
         
         case 'POST':
-            return res.status(200).json({ name: 'desde POST' })
+            return createUser(req,res)
        
          default:
             return res.status(400).json({ name: 'error' })
@@ -36,4 +37,10 @@ const getUsers = async(res:NextApiResponse) =>{
 
     res.status(200).json(users)
     // res.status(200).json(process.env)
+}
+
+const createUser = async(req:NextApiRequest,res:NextApiResponse,) =>{
+
+    
+
 }
