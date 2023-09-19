@@ -40,7 +40,28 @@ const getUsers = async(res:NextApiResponse) =>{
 }
 
 const createUser = async(req:NextApiRequest,res:NextApiResponse,) =>{
+    const{nombre,email,password,categoria,descripcion} = req.body;
+    if(!nombre || !email || !password || !categoria || !descripcion){
+        return res.status(400).json({name:'error'})
+        
+    }
 
-    
+    await db.connect();
+
+    const user = new User({
+        nombre:req.body.nombre,
+        email:req.body.email,
+        password:req.body.password,
+        categoria:req.body.categoria,
+        descripcion:req.body.descripcion,
+        donaciones:"0",
+        img:req.body.img || null,
+    })
+
+    const createdUser = await user.save();
+
+    await db.disconnect();
+
+    res.status(200).json(createdUser)
 
 }
