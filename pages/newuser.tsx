@@ -32,44 +32,44 @@ export default function NewUser(){
 
     return(
         <Layout>
-            <div className="container  contenedor-sign-in">
+            <div className='container-fluid'>
+            <div className="contenedor-form">
                 <h2 className="text-center">Sign in to Waves</h2>
                 <form>
-                    <div className="form-group d-flex justify-content-center">
+                  
                        
-                        <input type="text" className="form-control  p-2 m-2 text-center" id="nombre" placeholder="Name" onChange={(ev)=>{
+                        <input type="text" id="nombre" placeholder="Name" onChange={(ev)=>{
                             handleChange(ev)
                         }}/>
-                    </div>
+                   
                 
-                    <div className="form-group d-flex justify-content-center">
+              
                        
-                        <input type="text" className="form-control  p-2 m-2 text-center" id="descripcion" placeholder="Description" onChange={(ev)=>{
+                        <input type="text"    id="descripcion" placeholder="Description" onChange={(ev)=>{
                             handleChange(ev)
                         }}/>
-                    </div>
-                    <div className="form-group d-flex justify-content-center">
+                    
+       
                        
-                       <input type="text" className="form-control  p-2 m-2 text-center" id="categoria" placeholder="category" onChange={(ev)=>{
+                       <input type="text"   id="categoria" placeholder="category" onChange={(ev)=>{
                             handleChange(ev)
                         }}/>
-                   </div>
+                   
 
-                    <div className="form-group d-flex justify-content-center">
-                        <input type="email" className="form-control  p-2 m-2 text-center" id="email" placeholder="Email" onChange={(ev)=>{
+                        <input type="email"    id="email" placeholder="Email" onChange={(ev)=>{
                             handleChange(ev)
                         }}/>
-                    </div>
-                    <div className="form-group d-flex justify-content-center">
+                 
+                    
                        
-                        <input type="password" className="form-control  p-2 m-2 text-center" id="password" placeholder="Password" onChange={(ev)=>{
+                        <input type="password"  id="password" placeholder="Password" onChange={(ev)=>{
                             handleChange(ev)
                         }}/>
-                    </div>
-                    <div className="form-group d-flex justify-content-center">
+                   
+               
                         
-                        <input type="password" className="form-control  p-2 m-2 text-center" id="rpassword" placeholder="Repeat password" />
-                    </div>
+                        <input type="password"   id="rpassword" placeholder="Repeat password" />
+                   
                     
                   
                    
@@ -81,6 +81,8 @@ export default function NewUser(){
                     }}>Sign in</button>
                 </form>
             </div>
+            </div>
+            
 
 
         </Layout>

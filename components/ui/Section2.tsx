@@ -15,13 +15,13 @@ const comentarios = [
         nombre: 'Italo Ferreira',
         img:usuario2,
         categoria:'surfing',
-        comentario:'Waves permite sustentar tus proyectos de una manera intuitivamente sencilla: Tendiendo un puente retórico entre invitar a alguien a tomar algo en forma de agradecimiento y una aplicación digital. Parece difícil que algo analógico tenga resonancia en lo digital, pero Waves lo logra.',
+        comentario:'Waves allows you to support your projects in an intuitively simple way: Building a rhetorical bridge between inviting someone for a drink as a thank you and a digital application. It seems difficult for something analog to resonate with digital, but Waves achieves it.',
     },
     {
     nombre: 'Bruno Nunez',
     img:usuario3,
     categoria:'climbing',
-    comentario:'Waves es una plataforma que ayuda muchos atletas extremos. Yo lo encontré como una forma de conectarme con mis seguidores donde ellos pueden ayudarme a seguir creando con su aporte.',
+    comentario:'Waves is a platform that helps many extreme athletes. I found it as a way to connect with my followers where they can help me continue creating with their contribution.',
     }
 ]
 
@@ -30,7 +30,7 @@ export const Section2 = () => {
                           
     return (
         <div className=" container contenedor-seccion2 ">
-            <h2 className="text-center">¿Que dicen de Cafecito?</h2>
+            <h2 className="text-center">¿What they are saying about Waves?</h2>
          
             <div className="contenedor-comentarios">
                 <ul >

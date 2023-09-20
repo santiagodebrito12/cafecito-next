@@ -595,7 +595,7 @@ div.contenedor-main div .btn-crear-cuenta{
   flex-shrink: 0;
 }
 .card-categoria p{
-  color:#7c64bf;
+  color:var(--textBlue);
   font-size: 0.6rem;
   font-weight: 700;
   margin-top: 10px;
@@ -643,7 +643,7 @@ div.contenedor-main div .btn-crear-cuenta{
   flex-shrink: 0;
 }
 .card-categoria p{
-  color:#7c64bf;
+  color:var(--textBlue);
   font-size: 0.8rem;
  
   margin-top: 10px;
@@ -866,45 +866,60 @@ footer{
 }
 
 /*Sign in*/
-.contenedor-sign-in form{
+.contenedor-form {
+  width: 80%;
+  padding: 30px 40px;
+  background-color: var(--secondBackground);
+  border-radius: 24px;
+}
+.contenedor-form form{
   display: flex;
   flex-direction: column;
 }
-.contenedor-sign-in form .form-group input{
+.contenedor-form form .form-group input{
   border-radius: 100px;
   width: 80%;
   background-color: var(--secondBackground);
+  color:white ;
 }
 @media(min-width:768px){
-  .contenedor-sign-in form .form-group input{
+
+  .contenedor-form {
+    width: 450px ;
+  }
+
+  .contenedor-form  form .form-group input{
     width: 340px;
   }
 } 
 
-.contenedor-sign-in{
+.contenedor-form {
   margin: 50px auto;
   
 }
-.contenedor-sign-in h2{
+.contenedor-form  h2{
   color: white;
   font-size: 24px;
   font-weight: 650;
   
 }
-.contenedor-sign-in .btn-sign-in{
+.contenedor-form .btn-sign-in{
   padding: 6px 26px;
   background-color: var(--textBlue);
   color: white;
   margin: 8px auto;
+  width: 80%;
 }
-@media(min-width:768px){
-  .contenedor-sign-in .btn-sign-in{
-    padding: 6px 56px;
- 
-  }
-}
-.contenedor-sign-in .btn-sign-in:hover{
+.contenedor-form  .btn-sign-in:hover{
   background-color: #7d93c4;
+  
+}
+
+@media(min-width:768px){
+  .contenedor-form .btn-sign-in{
+    padding: 6px 56px;
+    width: 50%;
+  }
 }
 
 /*Login*/
@@ -918,7 +933,7 @@ footer{
   text-align: center;
 }
 .contenedor-login .btn-sign-in{
-  padding: 6px 26px;
+  padding: 6px 46px;
   background-color: var(--textBlue);
   color: white;
   margin: 8px auto;

@@ -15,7 +15,7 @@ import { SetStateAction } from "react";
 import{useQuery} from 'react-query';
 import Skeleton from "react-loading-skeleton"
 import { set } from "mongoose"
-import foto from '../assets/usuarios/italo.jpg'
+import userDefault from '@/assets/user.svg'
 
 export default function Explore (){
   
@@ -317,7 +317,7 @@ export default function Explore (){
               listStyle:'none',
             }}>
             <div className="contendor-img">
-                <Image src={user.img || foto} alt="imagen-usuario" className="imagen-usuario" width={75} height={71}/>
+                <Image src={user.img || userDefault} alt="imagen-usuario" className="imagen-usuario" width={75} height={71}/>
             </div>
   
             <div className="mt-3 m-auto w-75 contenedor-text-card">
