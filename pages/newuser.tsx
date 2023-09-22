@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout";
 
 import usersApi from '@/apis';
 import { User } from '@/interfaces';
+import Link from 'next/link';
 
 export default function NewUser(){
     
@@ -80,7 +81,9 @@ export default function NewUser(){
                         handleSubmit(event)
                     }}>Sign in</button>
                 </form>
+                <Link href="/login" className='link-to-account'><p>Already have an account? Login</p></Link>
             </div>
+            
             </div>
             
 

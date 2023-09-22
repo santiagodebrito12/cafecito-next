@@ -33,7 +33,12 @@ body, html {
   color: #fff;
   font-weight: 600;
   overflow-x: hidden;
+  min-height: 100vh;
+  
 } 
+
+
+
 /*header*/
 header,nav{
   transition: 3s all ease-in-out;
@@ -823,10 +828,9 @@ body.dark .contenedor-donacion{
 
 
 footer{
-  position: relative;
-  bottom: 0vh;
+ 
   width: 100%;
-  margin-top: 180px;
+  margin-top: 42px;
   background-color: var(--secondBackground);
   padding: 30px;
   display: flex;
@@ -869,6 +873,7 @@ footer{
 .contenedor-form {
   width: 80%;
   padding: 30px 40px;
+  margin: 50px auto 200px auto;
   background-color: var(--secondBackground);
   border-radius: 24px;
 }
@@ -893,10 +898,7 @@ footer{
   }
 } 
 
-.contenedor-form {
-  margin: 50px auto;
-  
-}
+
 .contenedor-form  h2{
   color: white;
   font-size: 24px;
@@ -914,7 +916,18 @@ footer{
   background-color: #7d93c4;
   
 }
-
+.link-to-account{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+.link-to-account:hover{
+  color: var(--textBlue);
+}
+.link-to-account p{
+  margin: 8px 0px;
+}
 @media(min-width:768px){
   .contenedor-form .btn-sign-in{
     padding: 6px 56px;
@@ -923,10 +936,7 @@ footer{
 }
 
 /*Login*/
-.contenedor-login{
-  margin: 50px auto;
-  color: white;
-}
+
 .contenedor-login h2{
   font-size: 24px;
   font-weight: 650;
