@@ -10,7 +10,7 @@ interface UserDetailProps {
 
 export const Donaciones = ({user}:UserDetailProps) => {
   return (
-    <div className="contenedor-donacion col-4">
+    <div className="contenedor-donacion ">
        <div>
             
             <h1 className=" descripcion mt-3">Do you want to share a wave? </h1>

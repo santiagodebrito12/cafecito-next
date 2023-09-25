@@ -2,7 +2,7 @@ import React,{useState,useContext} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/waves.svg'
-
+import { useSelector } from 'react-redux';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export const NavBar = () => {
     const [open, setOpen] = useState(false);
+    const{userLogin}=useSelector((state:any)=>state.loginState);
 
     const handleOpen  = () =>{
         if(!open){
@@ -31,7 +32,10 @@ export const NavBar = () => {
             
                 <h3 className="titulo "  >Waves</h3>   
             </div>
-    
+            {(userLogin !== null)
+            ? <div className='contenedor-welcome'><h3 className='welcome-title'>Hi {userLogin.nombre}!</h3> </div> 
+            :
+           
             <nav className={open ? 'mt-2 p-1 open' : 'mt-2 pt-1 close'} 
             >
               
@@ -47,7 +51,8 @@ export const NavBar = () => {
                     borderRadius:'5px',
                 }}>Login</Link></li>
                 </ul>
-            </nav>
+            </nav>}
+            
             <MenuIcon className="menu-icon" onClick={handleOpen}/>
            
 

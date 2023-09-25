@@ -22,9 +22,9 @@ export default function Explore (){
   const [data,setData]=useState<User[]>([]);
   const[isLoading,setIsLoading]=useState(false);
   const [busqueda,setBusqueda]=useState('');
-  const[userBusqueda,setUserBusqueda]=useState<User>();
+  
   const{categoriaSelect}=useSelector((state:any)=>state.categoriaSelect);
-  // const {data,isLoading} = useQuery('users',()=>getUsers());
+ 
   
   const handleBusqueda = ()=>{
       data.filter((user:User)=>{

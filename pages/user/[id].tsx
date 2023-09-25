@@ -4,9 +4,8 @@ import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { IUser, User } from '@/models'
 import { getUsers, getUserById } from '@/utils';
 import  usersApi  from '@/apis';
-import { get } from 'http';
 import {DetailHeader,DescriptionDetail,Donaciones} from '@/components/ui/UserDetail'
-import { Content } from '@/components/ui/UserDetail/Content';
+import { useSelector } from 'react-redux';
 
 
 interface HomeProps {
@@ -14,6 +13,8 @@ interface HomeProps {
 }
 
 export default function UserPage ({user}:HomeProps) {
+  const{userLogin}=useSelector((state:any)=>state.loginState);
+  
   const [detailState, setdetailState] = useState('perfil')
   
   return (
@@ -21,20 +22,20 @@ export default function UserPage ({user}:HomeProps) {
       
       <div className="contenedor-perfil  ">
                 
-                <DetailHeader user={user} setdetailState={setdetailState}/>
+                <DetailHeader user={user} setdetailState={setdetailState} userLogin={userLogin}/>
                   
                  
 
-               
+                  <div className="container-fluid">
                 <div className="row  contenedor-info d-flex justify-content-center">
                    
-                    <DescriptionDetail user={user}/>
+                    <DescriptionDetail user={user} userLogin={userLogin}/>
 
 
                     <Donaciones user={user}/>
            
                   </div>
-                
+                </div>
         </div>
       
     </Layout>

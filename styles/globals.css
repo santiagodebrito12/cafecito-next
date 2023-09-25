@@ -65,6 +65,19 @@ body.dark .burguer-dark{
   justify-content: space-between;
   align-items: center;
 }
+.contenedor-header .contenedor-welcome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+.contenedor-header .contenedor-welcome .welcome-title{
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+
+}
 .logo{
   width: 25px;
   height: 25px;
@@ -682,21 +695,47 @@ div.contenedor-main div .btn-crear-cuenta{
  
 
 }
+.contenedor-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 20px;
+  margin: 28px 42px;
+}
+@media(max-width:767px){
+  .contenedor-info .contenedor-donacion{
+   margin-top: 16px;
+  }
+}
+
 
 @media(min-width:768px){
   .contenedor-info{
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
       margin-top: 15px;
   }
+  .contenedor-info .contenedor-descripcion{
+    flex: 6;
+  }
+  .contenedor-info .contenedor-descripcion .edit-icon-description{
+    position: absolute;
+    right: 10px;
+  }
+  .contenedor-info .contenedor-donacion{
+    flex: 4;
+  }
 }
-
 @media(min-width:768px){
   .contenedor-donacion{
       width: 45%;
 
   }
 }
+
 .contenedor-donacion{
   margin-top: 25px;
   -webkit-box-sizing: border-box;
@@ -705,18 +744,17 @@ div.contenedor-main div .btn-crear-cuenta{
   border-radius: 6px;
   -webkit-box-shadow: 0 0 1px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 10px 20px rgb(0 0 0 / 4%);
   box-shadow: 0 0 1px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 10px 20px rgb(0 0 0 / 4%);
-  background-color: #ededed;
+  color: white;
 }
 body.dark .contenedor-donacion{
   background-color: rgb(56, 50, 65);
 }
 .contendor-botones{
-  background-color: #fff;
+  
   border-radius: 2px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: 700;
-  color: #333;
   padding: 0;
   width: 82px;
   height: 32px;
@@ -729,7 +767,7 @@ body.dark .contenedor-donacion{
   font-weight: 700;
   width: 30px;
 }
-.contenedor-form form input,.contenedor-form form textarea{
+.contenedor-form form input,.contenedor-form form select,.contenedor-form form textarea{
   
   border-radius: 6px;
   background-color: #fff;
@@ -781,6 +819,11 @@ body.dark .contenedor-donacion{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.contenedor-detalles-nombre div .edit-icon{
+  color: white;
+  position: absolute;
+  right: 0px;
 }
 .contenedor-detalles-nombre h1,.contenedor-detalles-nombre p,.contenedor-detalles-nombre h3{
       font-weight: 700;

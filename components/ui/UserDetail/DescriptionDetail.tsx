@@ -7,14 +7,18 @@ import insta from '@/assets/insta.svg';
 import facebook from '@/assets/facebook.svg';
 import youtube from '@/assets/youtube.svg';
 import Image from "next/image";
+import EditIcon from '@mui/icons-material/Edit';
 interface UserDetailProps {
-    user:IUser
+    user:IUser,
+    userLogin:IUser,
 }
 
-export const DescriptionDetail = ({user}:UserDetailProps) => {
+export const DescriptionDetail = ({user,userLogin}:UserDetailProps) => {
+  
   return (
  
-    <div className="contenedor-descripcion col-6">
+    <div className="contenedor-descripcion position-relative">
+    {userLogin !== null ? <EditIcon className="edit-icon-description"/> : null}
     <h1 className=" descripcion">Description: </h1>
     <p>{user.descripcion}</p>
 
