@@ -51,6 +51,7 @@ export default function NewUser(){
         
         const res = await usersApi.post('/users', newUser);
         console.log(res.data);
+        console.log(res.data);
         dispatch(setUser(res.data));
 
 

@@ -1,8 +1,38 @@
 import React from 'react'
+import { useState } from 'react'
 import { Layout } from '@/components/layout'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { setUser } from '@/store/slices/loginState';
+import { useSelector, useDispatch } from 'react-redux';
+import usersApi from '@/apis'
+
 export default function Login() {
-  return (
+    const router = useRouter();
+    const dispatch = useDispatch()
+    
+    const [userLogin, setUserLogin] = useState({
+        email: '',
+        password: ''
+    })
+    const handleChange = (e: any) => {
+        setUserLogin({
+            ...userLogin,
+           [e.target.name]: e.target.value
+         })
+    }
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault()
+     
+        
+        const res = await usersApi.get('/login', { params: userLogin });
+        dispatch(setUser(res.data));
+       
+        (res.status === 200) && router.push(`/user/${res.data._id}`);
+    }
+
+    return (
     <Layout>
         <div className='container'>
         <div className="contenedor-form contenedor-login">
@@ -10,9 +40,11 @@ export default function Login() {
                 <h2 className='text-center'>Login</h2>
                 
                     <form>
-                        <input placeholder='Email' type='email'/>
-                        <input placeholder='Password' type='password'/>
-                        <button className=' btn btn-sign-in mt-3'>Login</button>
+                        <input placeholder='Email' type='email' name='email' onChange={handleChange}/>
+                        <input placeholder='Password' type='password' name='password' onChange={handleChange}/>
+                        <button className=' btn btn-sign-in mt-3' onClick={(e)=>{
+                            handleSubmit(e)
+                        }}>Login</button>
                     </form>
                     {/* <form className='d-flex justify-content-center flex-column'>
                         <div className="form-group">
