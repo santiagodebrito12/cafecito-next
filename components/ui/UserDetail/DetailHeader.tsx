@@ -15,7 +15,7 @@ export const DetailHeader = ({user,setdetailState,userLogin}:UserDetailProps) =>
         <div className="col-4 m-auto contenedor-detalles-nombre">
         <div className="d-flex position-relative">
         <Image src={(user.img) ? user.img : userDefault} className="img-usuario" alt="imagen-usuario" width={100} height={100}/>
-        {userLogin !== null ? <EditIcon className="edit-icon "/> : null}
+        {(userLogin !== null && userLogin === user) ? <EditIcon className="edit-icon "/> : null}
         
         </div>
       

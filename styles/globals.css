@@ -69,7 +69,7 @@ body.dark .burguer-dark{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 18px;
+  
 }
 .contenedor-header .contenedor-welcome .welcome-title{
   color: white;
@@ -276,7 +276,7 @@ div.contenedor-main h1{
   font-weight: 550;
   color:var(--textBlue);
   text-align: center;
-  margin: 44px 0px;
+  margin: 44px 0px 12px;
   
 }
 div.contenedor-main p{

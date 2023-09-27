@@ -32,12 +32,15 @@ export default function handler(
 const getLogin = async(req:NextApiRequest,res:NextApiResponse) =>{
     
     const{email,password} = req.query;
-    
+   
     await db.connect();
-
-    const user = await User.findOne({email,password});
-
+    const user = await User.findOne({email,password}); 
     await db.disconnect();
-
-    res.status(200).json(user)
+    console.log(user)
+   if(user === null){
+       return res.status(404).json({message:'usuario no encontrado'})
+    }
+   
+    res.status(200).json(user);
+    
 }

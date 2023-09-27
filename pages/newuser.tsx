@@ -70,7 +70,7 @@ export default function NewUser(){
                   
                         {error 
                         &&
-                        <div className='btn btn-danger w-100 text-center d-flex'>
+                        <div className='alert alert-danger w-100 text-center d-flex'>
                             <p>Todos los campos son obligatorios</p>
                         </div>
                         

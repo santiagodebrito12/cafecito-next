@@ -18,7 +18,7 @@ export const DescriptionDetail = ({user,userLogin}:UserDetailProps) => {
   return (
  
     <div className="contenedor-descripcion position-relative">
-    {userLogin !== null ? <EditIcon className="edit-icon-description"/> : null}
+    {(userLogin !== null && userLogin === user) ? <EditIcon className="edit-icon "/> : null}
     <h1 className=" descripcion">Description: </h1>
     <p>{user.descripcion}</p>
 

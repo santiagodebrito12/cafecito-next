@@ -32,9 +32,9 @@ export const NavBar = () => {
             
                 <h3 className="titulo "  >Waves</h3>   
             </div>
-            {(userLogin !== null)
-            ? <div className='contenedor-welcome'><h3 className='welcome-title'>Hi {userLogin.nombre}!</h3> </div> 
-            :
+           
+        
+        
            
             <nav className={open ? 'mt-2 p-1 open' : 'mt-2 pt-1 close'} 
             >
@@ -46,12 +46,18 @@ export const NavBar = () => {
                 <li className="btn" style={{
                     padding:'10px 20px',
                 }}><Link className="links explorar" href="/explore">Explore</Link></li>
-                <li className="btn ingresar"><Link className=" links ingresar" href="/auth" id="ingresar-header" style={{
-                    padding:"10px 20px",
-                    borderRadius:'5px',
-                }}>Login</Link></li>
+               
+              
+                   {(userLogin !== null)
+                    ? <div className='contenedor-welcome'><h3 className='welcome-title'>Hi {userLogin.nombre}!</h3> </div> 
+                    :   <li className="btn ingresar"><Link className=" links ingresar" href="/auth" id="ingresar-header" style={{
+                        padding:"10px 20px",
+                        borderRadius:'5px',
+                    }}>Login</Link></li>  
+                    }
+                    
                 </ul>
-            </nav>}
+                </nav>
             
             <MenuIcon className="menu-icon" onClick={handleOpen}/>
            

@@ -10,7 +10,7 @@ import usersApi from '@/apis'
 export default function Login() {
     const router = useRouter();
     const dispatch = useDispatch()
-    
+    const [error,setError]=useState(false);
     const [userLogin, setUserLogin] = useState({
         email: '',
         password: ''
@@ -24,12 +24,18 @@ export default function Login() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault()
-     
+        try {
+            const res = await usersApi.get('/login', { params: userLogin });
+            dispatch(setUser(res.data));
+            router.push(`/user/${res.data._id}`)
+        } catch (error) {
+            setError(true);
+            setTimeout(()=>{
+                setError(false)
+                },2000)
+        }
         
-        const res = await usersApi.get('/login', { params: userLogin });
-        dispatch(setUser(res.data));
        
-        (res.status === 200) && router.push(`/user/${res.data._id}`);
     }
 
     return (
@@ -40,6 +46,7 @@ export default function Login() {
                 <h2 className='text-center'>Login</h2>
                 
                     <form>
+                        {error && <div className="alert alert-danger text-center">User or password invalid</div>}
                         <input placeholder='Email' type='email' name='email' onChange={handleChange}/>
                         <input placeholder='Password' type='password' name='password' onChange={handleChange}/>
                         <button className=' btn btn-sign-in mt-3' onClick={(e)=>{
