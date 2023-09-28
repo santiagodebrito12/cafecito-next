@@ -41,7 +41,7 @@ export const DescriptionDetail = ({user,userLogin}:UserDetailProps) => {
     {edit ? <textarea className="form-control w-75" rows={2} placeholder={user.descripcion} onChange={(e)=>{
       setDescripcion(e.target.value)
     }} /> :  <p>{user.descripcion}</p>}
-    {edit && <button className="btn btn-sign-in mt-3 button-save" onClick={()=>{
+    {edit && <button className="btn mt-3 button-save" onClick={()=>{
       updateUser();
       
     }}>Save</button>}
