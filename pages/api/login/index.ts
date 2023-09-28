@@ -37,7 +37,7 @@ const getLogin = async(req:NextApiRequest,res:NextApiResponse) =>{
     const user = await User.findOne({email,password}); 
     await db.disconnect();
     console.log(user)
-   if(user === null){
+if(user === null){
        return res.status(404).json({message:'usuario no encontrado'})
     }
    

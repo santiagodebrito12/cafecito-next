@@ -820,11 +820,35 @@ body.dark .contenedor-donacion{
   align-items: center;
   justify-content: center;
 }
-.contenedor-detalles-nombre div .edit-icon{
-  color: white;
-  position: absolute;
-  right: 0px;
+
+.contenedor-icono {
+  width: 40px;
+    color: white;
+    position: absolute;
+    right: -40px;
+    background: var(--secondBackground);
+    border-radius: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
+
+
+.contenedor-icono .edit-icon{
+  color: var(--textBlue);
+  cursor: pointer;
+}
+#icono-descripcion{
+  position: absolute;
+  right: 10px !important;
+}
+
+.contenedor-icono .edit-icon:hover{
+  color: white;
+}
+
 .contenedor-detalles-nombre h1,.contenedor-detalles-nombre p,.contenedor-detalles-nombre h3{
       font-weight: 700;
       color: white;
@@ -990,4 +1014,13 @@ footer{
   background-color: var(--textBlue);
   color: white;
   margin: 8px auto;
+}
+
+.button-save{
+  background-color: var(--textBlue);
+  color: white;
+}
+
+.button-save:hover{
+  color: var(--textGray);
 }
