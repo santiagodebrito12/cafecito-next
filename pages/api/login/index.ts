@@ -3,7 +3,7 @@ import { connect } from '../../../database/db';
 import {db} from '@/database';
 import { User } from '@/models';
 import { IUser } from '@/models';
-import uploadToCloudinary from '../../../services/cloudinary.js';
+
 interface ILogin{
     email:string,
     password:string
@@ -37,9 +37,9 @@ const getLogin = async(req:NextApiRequest,res:NextApiResponse) =>{
     const user = await User.findOne({email,password}); 
     await db.disconnect();
     console.log(user)
-if(user === null){
-       return res.status(404).json({message:'usuario no encontrado'})
-    }
+    if(user === null){
+        return res.status(404).json({message:'usuario no encontrado'})
+        }
    
     res.status(200).json(user);
     
